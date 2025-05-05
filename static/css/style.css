@@ -126,15 +126,12 @@ nav#navbar a:hover {
 
 /* 스크롤 인디케이터 */
 .scroll-indicator {
-  position: absolute;
-  bottom: 2.5rem;
+  position: absolute;      /* 절대배치로 분리 */
+  bottom: 40px;            /* 원하는 위치로 조정 */
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  z-index: 100;            /* 파도보다 훨씬 위 */
   cursor: pointer;
-  z-index: 3;
 }
 
 .scroll-indicator .arrow {
@@ -158,7 +155,7 @@ nav#navbar a:hover {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 100px;
   z-index: 1;
 }
 
