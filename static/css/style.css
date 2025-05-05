@@ -313,10 +313,23 @@ nav#navbar a:hover {
 .timeline-item:nth-child(4) { animation-delay: 0.7s; }
 .timeline-item:nth-child(5) { animation-delay: 0.9s; }
 
+/* ────────────────────────────────────────────
+   Timeline: 좌측 항목도 모두 좌측 정렬
+────────────────────────────────────────────── */
+
 .timeline-item.left {
   left: 0;
-  text-align: right;
+  /* 기존에 들어 있던 text-align: right; 를 제거하세요 */
+  text-align: left;
+  /* 필요하다면 오른쪽 여백을 더 줄여서 중앙선과 충돌을 피할 수 있습니다 */
+  padding: 20px 30px 20px 60px; /* 좌우 패딩 순서: top right bottom left */
 }
+
+/* 카드 내부 텍스트도 확실히 좌측 정렬 */
+.timeline-item.left .timeline-content {
+  text-align: left;
+}
+
 
 .timeline-item.right {
   left: 50%;
