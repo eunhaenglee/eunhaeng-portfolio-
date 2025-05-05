@@ -91,7 +91,7 @@ nav#navbar a:hover {
   text-align: center;
 }
 
-/* 콘텐츠 박스 */
+/* 콘텐츠 */
 .home-content {
   position: relative;
   z-index: 2;
@@ -100,81 +100,71 @@ nav#navbar a:hover {
   margin: 0 auto;
 }
 
-.home-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
+.home-content h1 { font-size: 3rem; margin-bottom: 1rem; }
+.home-content .subtitle { font-size: 1.25rem; color: #333; margin-bottom: 1rem; font-weight: bold; }
+.home-content .intro    { font-size: 1.1rem; color: #555; line-height: 1.6; margin-bottom: 2.5rem; }
 
-/* 타입라이터 효과 */
+/* 타입라이터 */
 .typewriter {
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid #003366;
   width: 0;
-  animation: typing 2.5s steps(30, end) forwards,
-             blink 0.8s infinite;
+  animation: typing 2.5s steps(30,end) forwards, blink 0.8s infinite;
 }
-
-@keyframes typing {
-  from { width: 0; }
-  to   { width: 100%; }
-}
-@keyframes blink {
-  0%,100% { border-color: transparent; }
-  50%     { border-color: #003366; }
-}
-
-.home-content .subtitle {
-  font-size: 1.25rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.home-content .intro {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
-}
+@keyframes typing { from {width:0;} to{width:100%;} }
+@keyframes blink  { 0%,100%{border-color:transparent;} 50%{border-color:#003366;} }
 
 /* 스크롤 인디케이터 */
 .scroll-indicator {
   position: absolute;
-  bottom: 60px;           /* 필요시 조정 */
+  bottom: 60px;       /* ▶ 콘텐츠와 파도 사이에 충분히 여유 */
   left: 50%;
   transform: translateX(-50%);
-  color: #666;
-  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;         /* ▶ 파도 위에 */
+}
+
+.scroll-indicator .arrow {
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #666;
+  border-right: 2px solid #666;
+  transform: rotate(45deg);
   animation: bounce 2s infinite;
+  margin-bottom: 6px;
+}
+.scroll-indicator .label {
+  font-size: 0.9rem;
+  color: #666;
 }
 
+/* 바운스 애니메이션 */
 @keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50%     { transform: translateY(6px); }
+  0%,100% { transform: translateY(0) rotate(45deg); }
+  50%     { transform: translateY(8px) rotate(45deg); }
 }
 
-/* 파도 애니메이션 SVG */
+/* Wave 애니메이션 */
 .wave-animation {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100%;        /* ▶ 반드시 100% */
   height: 250px;
   z-index: 1;
   overflow: hidden;
 }
 
-/* 반응형 */
+/* 모바일 최종 조정 */
 @media screen and (max-width: 768px) {
-  .home-content h1 {
-    font-size: 2.2rem;
-  }
-  .scroll-indicator {
-    bottom: 40px;
-  }
+  .home-content h1 { font-size: 2.2rem; }
+  .scroll-indicator { bottom: 40px; }
 }
+
 
 
 /* ==============================
