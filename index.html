@@ -41,13 +41,7 @@
     </div>
   </div><!-- /.container -->
 
-  <!-- 파도 애니메이션은 section 직계 자식 -->
-  <svg class="wave-animation" viewBox="0 0 1200 100" preserveAspectRatio="none">
-    <path class="wave-path"
-          d="M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z" />
-  </svg>
-
-  <!-- 스크롤 인디케이터도 section 직계 자식 -->
+  <!-- 1) 스크롤 인디케이터를 먼저 놓습니다 -->
   <div
     class="scroll-indicator"
     onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });"
@@ -55,11 +49,17 @@
     <div class="arrow"></div>
     <span>Scroll to explore</span>
   </div>
+
+  <!-- 2) 그 다음에 파도 애니메이션 -->
+  <svg class="wave-animation" viewBox="0 0 1200 100" preserveAspectRatio="none">
+    <path class="wave-path" d="M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z" />
+  </svg>
 </section>
 
 
 
-  <!-- 이하 생략... -->
+
+ 
 </body>
 
 
