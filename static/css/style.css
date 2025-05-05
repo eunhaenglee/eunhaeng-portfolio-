@@ -1,3 +1,18 @@
+
+/* ─────────────────────────────────────────────
+   글로벌 박스 사이징 & 수평 오버플로우 방지
+───────────────────────────────────────────── */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;   /* 수평 스크롤 방지 */
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
 /* 기본 설정 */
 body {
   font-family: 'Helvetica Neue', sans-serif;
@@ -589,17 +604,21 @@ html {
 }
 
 .home-section {
+-  height: 100vh;
+-  /* 기존 background, overflow, width 등 */
++  width: 100%;          /* 100vw 대신 100% */
++  padding: 0 1rem;      /* 좌우 여백 확보 */
++  height: 100vh;
++  background: linear-gradient(145deg, #f3f7fb, #e0ebf5);
++  overflow: hidden;     /* 파도 오버플로우 숨김 */
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   text-align: center;
-  background: linear-gradient(145deg, #f3f7fb, #e0ebf5);
-  overflow: hidden;
-  width: 100%;
 }
+
 
 .home-bg {
   position: relative;
@@ -657,14 +676,21 @@ html {
 
 
 .wave-animation {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  z-index: 0;
-  overflow: hidden;
+-  position: absolute;
+-  bottom: 0;
+-  left: 0;
+-  width: 100%;
+-  height: 100px;
+-  z-index: 0;
++  position: absolute;
++  bottom: 0;
++  left: calc(-1rem);           /* .home-section 패딩만큼 당겨서 잘림 방지 */
++  width: calc(100% + 2rem);    /* 좌우 패딩만큼 더 확장 */
++  height: 100px;
++  z-index: 0;
+   overflow: hidden;
 }
+
 
 .wave-path {
   fill: #b8d6f0;
@@ -768,6 +794,43 @@ html {
 @keyframes blink {
   0%, 100% { border-color: transparent }
   50% { border-color: #003366 }
+}
+
+
+/* ─────────────────────────────────────────────
+   반응형 대응: 폰트 크기, 네비게이션, 타임라인, 프로젝트 그리드
+───────────────────────────────────────────── */
+@media screen and (max-width: 768px) {
+  /* 홈 헤더 텍스트 폰트 축소 */
+  .home-content h1 { font-size: 2.2rem; }
+  .home-content .subtitle { font-size: 1.2rem; }
+  .home-content .intro    { font-size: 1rem; }
+
+  /* 네비게이션이 길어질 때 줄 바꿈 */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* 타임라인 전체가 한 칼럼으로 */
+  .timeline {
+    padding-left: 1rem;       /* 좌측 여백 확보 */
+    margin-left: 0;
+  }
+  .timeline::before { left: 1rem; }
+  .timeline-item {
+    width: 100% !important;
+    left: 0 !important;
+    padding-left: 2rem;
+    text-align: left !important;
+    margin-bottom: 2rem;
+  }
+  .timeline-icon { left: 1rem; transform: none; }
+
+  /* 프로젝트 그리드 1열 */
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
