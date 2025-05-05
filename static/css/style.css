@@ -76,94 +76,106 @@ nav#navbar a:hover {
   color: #ffcc00;
 }
 
-/* ==============================
+/* ────────────────────────────────────────────
    HOME SECTION
-============================== */
+────────────────────────────────────────────── */
+
 .home-section {
-  position: relative;             /* wave 절대위치 기준 */
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   height: 100vh;
   background: linear-gradient(145deg, #f3f7fb, #e0ebf5);
   overflow: hidden;
-  padding-top: 60px;              /* fixed header 높이 보정 */
+  text-align: center;
 }
 
-.home-section .container {
+/* 콘텐츠 박스 */
+.home-content {
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 800px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
 }
 
 .home-content h1 {
   font-size: 3rem;
-  color: #0a2c56;
   margin-bottom: 1rem;
 }
 
-.home-content .highlight {
-  color: #0074e8;
+/* 타입라이터 효과 */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #003366;
+  width: 0;
+  animation: typing 2.5s steps(30, end) forwards,
+             blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes blink {
+  0%,100% { border-color: transparent; }
+  50%     { border-color: #003366; }
 }
 
 .home-content .subtitle {
   font-size: 1.25rem;
   color: #333;
   margin-bottom: 1rem;
-  font-weight: bold;
 }
 
 .home-content .intro {
-  max-width: 600px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 /* 스크롤 인디케이터 */
 .scroll-indicator {
-  position: absolute;      /* 절대배치로 분리 */
-  bottom: 40px;            /* 원하는 위치로 조정 */
+  position: absolute;
+  bottom: 60px;           /* 필요시 조정 */
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;            /* 파도보다 훨씬 위 */
+  color: #666;
+  font-size: 0.9rem;
   cursor: pointer;
-}
-
-.scroll-indicator .arrow {
-  width: 16px;
-  height: 16px;
-  border-bottom: 2px solid #666;
-  border-right: 2px solid #666;
-  transform: rotate(45deg);
+  z-index: 2;
   animation: bounce 2s infinite;
 }
 
-.scroll-indicator span {
-  margin-top: 6px;
-  font-size: 0.85rem;
-  color: #666;
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(6px); }
 }
 
-/* wave 애니메이션 */
+/* 파도 애니메이션 SVG */
 .wave-animation {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 250px;
   z-index: 1;
+  overflow: hidden;
 }
 
-/* bounce 애니메이션 */
-@keyframes bounce {
-  0%, 100% { transform: translateY(0) rotate(45deg); }
-  50%     { transform: translateY(10px) rotate(45deg); }
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  .home-content h1 {
+    font-size: 2.2rem;
+  }
+  .scroll-indicator {
+    bottom: 40px;
+  }
 }
+
 
 /* ==============================
    SECTION 기본 스타일
