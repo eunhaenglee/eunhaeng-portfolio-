@@ -30,29 +30,32 @@
        HOME SECTION
   ============================== -->
 <section id="home" class="home-section">
-  <div class="container">
-    <div class="home-content">
-      <h1 class="typewriter">Hello, I'm <span class="highlight">Eunhaeng</span></h1>
-      <p class="subtitle">🎬 Catalog Specialist at Amazon Prime Video Japan</p>
-      <p class="intro">
-        From Amazon Prime Video Japan to cross-border startups,
-        I specialize in global content strategy, localization, and AI-driven solutions.
-      </p>
-    </div>
-  </div><!-- /.container -->
+  <div class="home-content">
+    <h1 class="typewriter">Hello, I'm <span class="highlight">Eunhaeng</span></h1>
+    <p class="subtitle">🎬 Catalog Specialist at Amazon Prime Video Japan</p>
+    <p class="intro">
+      From Amazon Prime Video Japan to cross-border startups, I specialize in global content strategy,
+      localization, and AI-driven solutions.
+    </p>
 
-  <!-- 1) 스크롤 인디케이터를 먼저 놓습니다 -->
-  <div
-    class="scroll-indicator"
-    onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });"
-  >
-    <div class="arrow"></div>
-    <span>Scroll to explore</span>
+    <div class="scroll-indicator"
+         onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
+      ▼ Scroll to explore
+    </div>
   </div>
 
-  <!-- 2) 그 다음에 파도 애니메이션 -->
-  <svg class="wave-animation" viewBox="0 0 1200 100" preserveAspectRatio="none">
-    <path class="wave-path" d="M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z" />
+  <svg class="wave-animation" viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path fill="#b8d6f0" fill-opacity="1"
+          d="M0,128L60,154.7C120,181,240,235,360,229.3C480,224,600,160,720,133.3
+             C840,107,960,117,1080,122.7C1200,128,1320,128,1380,128L1440,128L1440,320
+             L0,320Z">
+      <animate attributeName="d" dur="4s" repeatCount="indefinite"
+               values="
+               M0,128L60,154.7C120,181,240,235,360,229.3C480,224,600,160,720,133.3C840,107,960,117,1080,122.7C1200,128,1320,128,1380,128L1440,128L1440,320L0,320Z;
+               M0,100L60,120C120,140,240,180,360,175C480,170,600,120,720,110C840,100,960,105,1080,112C1200,120,1320,125,1380,127L1440,128L1440,320L0,320Z;
+               M0,128L60,154.7C120,181,240,235,360,229.3C480,224,600,160,720,133.3C840,107,960,117,1080,122.7C1200,128,1320,128,1380,128L1440,128L1440,320L0,320Z
+               " />
+    </path>
   </svg>
 </section>
 
