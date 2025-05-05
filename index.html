@@ -8,39 +8,53 @@
 </head>
 <body>
   
+<body>
+  <!-- =========================================
+       1) HEADER: .container 래핑
+  ========================================= -->
   <header>
-    <nav id="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav id="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  
-  <section id="home" class="home-section">
-    <div class="home-content">
-      <h1 class="typewriter">Hello, I'm <span class="highlight">Eunhaeng</span></h1>
-      <p class="subtitle">🎬 Catalog Specialist at Amazon Prime Video Japan</p>
-      <p class="intro">
-        From Amazon Prime Video Japan to cross-border startups, I specialize in global content strategy, localization, and AI-driven solutions.
-      </p>
-    </div>
 
-    <div class="scroll-indicator"
-         onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
-      Scroll to explore
-      <div class="arrow"></div>
-    </div>
-    
-    <!-- Animated Wave SVG -->
-    <svg class="wave-animation" viewBox="0 0 1200 100" preserveAspectRatio="none">
-      <path class="wave-path"
-            d="M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z" />
-    </svg>
+  <!-- =========================================
+       2) HOME SECTION: .container 래핑
+  ========================================= -->
+  <section id="home" class="home-section">
+    <div class="container">
+      <div class="home-content">
+        <h1 class="typewriter">Hello, I'm <span class="highlight">Eunhaeng</span></h1>
+        <p class="subtitle">🎬 Catalog Specialist at Amazon Prime Video Japan</p>
+        <p class="intro">
+          From Amazon Prime Video Japan to cross-border startups, I specialize in global content strategy, localization, and AI-driven solutions.
+        </p>
+      </div>
+
+      <div class="scroll-indicator"
+           onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
+        Scroll to explore
+        <div class="arrow"></div>
+      </div>
+
+      <!-- Animated Wave SVG -->
+      <svg class="wave-animation" viewBox="0 0 1200 100" preserveAspectRatio="none">
+        <path class="wave-path" d="M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z" />
+      </svg>
+    </div><!-- /.container -->
   </section>
+
+  <!-- 이하 생략... -->
+</body>
+
 
   <section id="about" class="section fade-in">
     <div class="about-container">
