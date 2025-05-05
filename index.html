@@ -30,20 +30,28 @@
        HOME SECTION
   ============================== -->
 <section id="home" class="home-section">
+  <!-- 1) 콘텐츠 래퍼 -->
   <div class="home-content">
-    <h1 class="typewriter">Hello, I'm <span class="highlight">Eunhaeng</span></h1>
-    <p class="subtitle">🎬 Catalog Specialist at Amazon Prime Video Japan</p>
-    <p class="intro">
-      From Amazon Prime Video Japan to cross-border startups, I specialize in global content strategy,
-      localization, and AI-driven solutions.
+    <h1 class="typewriter">
+      Hello, I'm <span class="highlight">Eunhaeng</span>
+    </h1>
+    <p class="subtitle">
+      🎬 Catalog Specialist at Amazon Prime Video Japan
     </p>
-
-    <div class="scroll-indicator"
-         onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
-      ▼ Scroll to explore
-    </div>
+    <p class="intro">
+      From Amazon Prime Video Japan to cross-border startups,
+      I specialize in global content strategy, localization, and AI-driven solutions.
+    </p>
   </div>
 
+  <!-- 2) 스크롤 인디케이터 (콘텐츠 바로 아래) -->
+  <div class="scroll-indicator"
+       onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
+    <div class="arrow"></div>
+    <div class="label">Scroll to explore</div>
+  </div>
+
+  <!-- 3) Wave SVG (항상 section 직계 자식으로) -->
   <svg class="wave-animation" viewBox="0 0 1440 320" preserveAspectRatio="none">
     <path fill="#b8d6f0" fill-opacity="1"
           d="M0,128L60,154.7C120,181,240,235,360,229.3C480,224,600,160,720,133.3
@@ -58,6 +66,7 @@
     </path>
   </svg>
 </section>
+
 
 
 
