@@ -1,0 +1,793 @@
+/* 기본 설정 */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #0a2c56;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+
+/* 네비게이션 */
+header {
+  background-color: #0a2c56;
+  padding: 1em 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* 섹션 기본 */
+.section {
+  padding: 100px 20px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+/* 타임라인 공통 */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin-left: 50px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: #0a2c56;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-content {
+  background: #f6f9fc;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* 아이콘 원 */
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border: 3px solid #0a2c56;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* 아이콘 안의 이미지 조정 */
+.timeline-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+/* 텍스트 스타일 */
+.timeline-duration {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.timeline-content ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.position-professional {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #0a2c51; /* 짙은 네이비 계열: 안정감 */
+  margin: 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #cfdbe9; /* 얇고 고급스러운 하단 라인 */
+  display: inline-block;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.position-professional:hover {
+  color: #083469;
+  border-bottom-color: #083469;
+}
+
+
+
+/* Fade-in 효과 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.position-professional {
+  display: block;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #0a2c51;
+  margin-top: 6px;  /* 추가된 마진 */
+  padding-bottom: 6px;
+  border-bottom: 2px solid #cfdbe9;
+  display: block;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* About Me Section */
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-card {
+  background-color: #f9fbfd;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.highlight-item h4 {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: #0a2c51;
+}
+
+.highlight-item p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.98rem;
+  color: #333;
+}
+
+.about-footer {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro, .about-footer {
+    text-align: center;
+  }
+}
+/* Slide-up animation */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Apply animation to timeline items */
+.timeline-item {
+  opacity: 0;
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+/* Add delay for staggered effect */
+.timeline-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.timeline-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.timeline-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.timeline-item:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.timeline-item:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
+/* Project Section Layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+/* Individual Project Card */
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Typography */
+.project-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a2c51;
+  margin-bottom: 5px;
+}
+
+.project-date {
+  font-size: 0.85rem;
+  color: #888;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.project-role {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.project-impact {
+  margin-bottom: 12px;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: #444;
+  list-style-type: disc;
+}
+
+/* Skill/Tech Badge */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badge {
+  background-color: #e6f0fa;
+  color: #0a2c51;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.intro {
+  font-size: 1rem;
+  margin: 1rem 0 2rem;
+  color: #333;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-buttons a {
+  padding: 12px 24px;
+  margin: 0 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: #0074e8;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #e8f0ff;
+  color: #0074e8;
+}
+
+.scroll-indicator {
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeIn 2s ease;
+}
+
+.scroll-indicator a {
+  text-decoration: none;
+  color: #0074e8;
+  font-size: 0.9rem;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator .arrow {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+
+/* Fade + bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(6px);
+  }
+
+  60% {
+    transform: translateY(3px);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.mindset-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.mindset-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.mindset-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 24px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.mindset-card:hover {
+  transform: translateY(-6px);
+}
+
+.mindset-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.mindset-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+#toolbox {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.toolbox-category {
+  margin-bottom: 3em;
+}
+
+.toolbox-category h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+.toolbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.tool-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.badge-blue {
+  background-color: #4a90e2;
+}
+
+.badge-pink {
+  background-color: #e91e63;
+}
+
+.badge-purple {
+  background-color: #7e57c2;
+}
+
+/* ===== Contact Section ===== */
+#contact {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f9fbfd;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #0d47a1;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: #1565c0;
+  transform: translateY(-2px);
+}
+
+.closing-message {
+  font-size: 0.95rem;
+  color: #666;
+  max-width: 600px;
+  margin: 30px auto 0;
+  font-style: italic;
+}
+
+.home-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(145deg, #f3f7fb, #e0ebf5);
+  overflow: hidden;
+  width: 100%;
+}
+
+.home-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.home-content {
+  z-index: 1;
+  position: relative;
+  max-width: 800px;
+  padding: 0 1.5rem;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-content .subtitle {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.home-content .intro {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.scroll-down {
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #555;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.scroll-down:hover {
+  transform: translateY(5px);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+
+.wave-animation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.wave-path {
+  fill: #b8d6f0;
+  animation: waveMove 2.5s ease-in-out infinite;
+}
+
+@keyframes waveMove {
+  0% {
+    d: path("M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z");
+  }
+  50% {
+    d: path("M0,50 C300,20 900,60 1200,50 L1200,100 L0,100 Z");
+  }
+  100% {
+    d: path("M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z");
+  }
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 2rem;        /* ← 이전 3rem에서 2.5rem으로 */
+  height: 2rem;       /* ← 이전 3rem에서 2.5rem으로 */
+  background-color: #0F2C54;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;    /* 화살표 크기도 살짝 줄였습니다 */
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  opacity: 1;
+}
+
+/* 부드러운 스크롤을 위해 global 설정 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* style.css에 추가 */
+.home-content .subtitle {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold; /* ← 이 줄을 추가하세요 */
+}
+
+
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+  position: absolute;
+  bottom: 120px; /* ← 이 값을 조정하면 위치가 올라감 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #666;
+  font-size: 0.9rem;
+  animation: fadeIn 2s ease-in-out;
+  cursor: pointer;
+  z-index: 10; /* 애니메이션 위로 보이게 */
+}
+
+.scroll-indicator .arrow {
+  margin-top: 5px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #666;
+  border-right: 2px solid #666;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+}
+
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(10px) rotate(45deg); }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #003366;
+  width: 0;
+  animation: typing 2.5s steps(30, end) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #003366 }
+}
+
+
+/* 반응형 대응 */
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 40px;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  .timeline-icon {
+    left: 8px;
+    transform: none;
+  }
+
+}
