@@ -210,6 +210,29 @@ nav#navbar a:hover {
   }
 }
 
+/* Scroll 인디케이터 기본 위치 (PC 포함) */
+.scroll-indicator {
+  position: absolute;
+  bottom: 180px;        /* 기존 120px → 180px 으로 올림 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #666;
+  font-size: 0.9rem;
+  animation: fadeIn 2s ease-in-out;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* 모바일 전용 추가 조정 (필요시) */
+@media screen and (max-width: 768px) {
+  .scroll-indicator {
+    bottom: 200px;      /* 화면이 작을 땐 좀 더 올려도 됩니다 */
+  }
+}
+
 
 /* bounce 애니메이션 */
 @keyframes bounce {
