@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eunhaeng | Portfolio</title>
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
-
+  
   <header>
-    <nav>
+    <nav id="navbar">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -20,60 +20,68 @@
     </nav>
   </header>
   
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <h1 class="typewriter">Hello, I'm <span class="highlight">Eunhaeng</span></h1>
+      <p class="subtitle">🎬 Catalog Specialist at Amazon Prime Video Japan</p>
+      <p class="intro">
+        From Amazon Prime Video Japan to cross-border startups, I specialize in global content strategy, localization, and AI-driven solutions.
+      </p>
+    </div>
 
-<section id="home" class="home-section">
-  <div class="home-content">
-    <h1 class="typewriter">Hello, I'm <span class="highlight">Eunhaeng</span></h1>
-    <p class="subtitle">🎬 Catalog Specialist at Amazon Prime Video Japan</p>
-    <p class="intro">
-      From Amazon Prime Video Japan to cross-border startups, I specialize in global content strategy, localization, and AI-driven solutions.
-    </p>
-  </div>
-
-  <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
-    Scroll to explore
-    <div class="arrow"></div>
-  </div>
-  
-  <!-- Animated Wave SVG -->
-  <svg class="wave-animation" viewBox="0 0 1200 100" preserveAspectRatio="none">
-    <path class="wave-path" d="M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z" />
-  </svg>
-  
-</section>
-
+    <div class="scroll-indicator"
+         onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
+      Scroll to explore
+      <div class="arrow"></div>
+    </div>
+    
+    <!-- Animated Wave SVG -->
+    <svg class="wave-animation" viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <path class="wave-path"
+            d="M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z" />
+    </svg>
+  </section>
 
   <section id="about" class="section fade-in">
     <div class="about-container">
       <h2 class="section-title">About Me</h2>
-      
       <div class="about-card">
         <p class="about-intro">
-          Hello! I’m <strong>Eunhaeng</strong>, a Catalog Specialist at <strong>Amazon Prime Video Japan</strong>.<br>
+          Hello! I’m <strong>Eunhaeng</strong>, a Catalog Specialist at <strong>Amazon Prime Video Japan</strong>.<br />
           I specialize in global content operations, metadata optimization, and localization for Korean and Japanese markets.
         </p>
-  
         <div class="about-highlights">
           <div class="highlight-item">
             <h4>📚 Academic Background</h4>
-            <p>Studied Digital Content & Business Planning at university in Tokyo. Developed 3D environments and built a creative foundation in content creation.</p>
+            <p>
+              Studied Digital Content & Business Planning at university in Tokyo. 
+              Developed 3D environments and built a creative foundation in content creation.
+            </p>
           </div>
           <div class="highlight-item">
             <h4>🧠 Internship Experience</h4>
-            <p>Worked on cross-border e-commerce, AI-powered tools, and bilingual research to support Korean companies expanding into Japan.</p>
+            <p>
+              Worked on cross-border e-commerce, AI-powered tools, and bilingual 
+              research to support Korean companies expanding into Japan.
+            </p>
           </div>
           <div class="highlight-item">
             <h4>🎬 Prime Video Japan</h4>
-            <p>Currently responsible for content publishing, catalog integrity, and metadata quality. Collaborating across global teams to elevate viewer experience.</p>
+            <p>
+              Currently responsible for content publishing, catalog integrity, 
+              and metadata quality. Collaborating across global teams to elevate viewer experience.
+            </p>
           </div>
           <div class="highlight-item">
             <h4>🚀 Growth & Future</h4>
-            <p>Expanding expertise in data analysis and AI to lead innovation at the intersection of entertainment and technology.</p>
+            <p>
+              Expanding expertise in data analysis and AI to lead innovation 
+              at the intersection of entertainment and technology.
+            </p>
           </div>
         </div>
-  
         <p class="about-footer">
-          Outside of work, I enjoy running, reading, and exploring diverse cultures.
+          Outside of work, I enjoy running, reading, and exploring diverse cultures.<br />
           I'm always open to collaboration, new ideas, and meaningful conversations!
         </p>
       </div>
@@ -83,278 +91,275 @@
   <section id="mindset" class="section fade-in mindset-section">
     <h2>My Mindset</h2>
     <div class="mindset-container">
-  
       <div class="mindset-card">
         <h3>💼 Take Ownership</h3>
-        <p>I don't just follow tasks — I take charge.<br>
-        At BEENOS, I proposed and implemented a Chrome extension that’s now improving response speed by 34%.</p>
+        <p>
+          I don't just follow tasks — I take charge.<br />
+          At BEENOS, I proposed and implemented a Chrome extension 
+          that’s now improving response speed by 34%.
+        </p>
       </div>
-  
       <div class="mindset-card">
         <h3>🧠 Solve the Right Problem</h3>
-        <p>I break problems down before jumping in.<br>
-        At Prime Video, I redefined metadata guidelines by focusing on the actual user confusion.</p>
+        <p>
+          I break problems down before jumping in.<br />
+          At Prime Video, I redefined metadata guidelines 
+          by focusing on the actual user confusion.
+        </p>
       </div>
-  
       <div class="mindset-card">
         <h3>🤖 Use AI with Intent</h3>
-        <p>AI isn’t a trend — it’s a tool.<br>
-        I built an auto keyword extractor that cut processing time by 30% during my internship.</p>
+        <p>
+          AI isn’t a trend — it’s a tool.<br />
+          I built an auto keyword extractor that cut processing time by 30% 
+          during my internship.
+        </p>
       </div>
-  
     </div>
   </section>
-  
 
-<section id="experience" class="section">
-  <h2 class="section-title">Experience</h2>
-  <div class="timeline">
+  <section id="experience" class="section">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
 
-    <!-- Amazon -->
-    <div class="timeline-item left">
-      <div class="timeline-icon">
-        <img src="static/images/amazon_logo.png" alt="Amazon Logo">
+      <!-- Amazon -->
+      <div class="timeline-item left">
+        <div class="timeline-icon">
+          <img src="static/images/Amazon_Logo.png" alt="Amazon Logo" />
+        </div>
+        <div class="timeline-content">
+          <h3>Amazon Japan G.K. (Prime Video)</h3>
+          <span class="timeline-duration">Apr 2025 – Present</span>
+          <p class="position-professional">
+            Catalog Specialist – PV Publishing Ops, VAR Department
+          </p>
+          <ul>
+            <li>Manage catalog, metadata, and content publishing operations for Prime Video Japan.</li>
+            <li>Coordinate with global and regional teams to optimize publishing workflows.</li>
+            <li>Analyze metadata to improve user experience on Prime Video.</li>
+          </ul>
+        </div>
       </div>
-      <div class="timeline-content">
-        <h3>Amazon Japan G.K. (Prime Video)</h3>
-        <span class="timeline-duration">Apr 2025 – Present</span>
-        <p class="position-professional">Catalog Specialist – PV Publishing Ops, VAR Department</p>
-        <ul>
-          <li>Manage catalog, metadata, and content publishing operations for Prime Video Japan.</li>
-          <li>Coordinate with global and regional teams to optimize publishing workflows.</li>
-          <li>Analyze metadata to improve user experience on Prime Video.</li>
+
+      <!-- BEENOS -->
+      <div class="timeline-item right">
+        <div class="timeline-icon">
+          <img src="static/images/Beenos_Logo.png" alt="Beenos Logo" />
+        </div>
+        <div class="timeline-content">
+          <h3>BEENOS Inc.</h3>
+          <span class="timeline-duration">Oct 2024 – Mar 2025</span>
+          <p class="position-professional">Business Development Intern</p>
+          <ul>
+            <li>Enhanced requirement docs, improving metadata workflows.</li>
+            <li>Built AI tool for keyword extraction (↑30% speed).</li>
+            <li>Proposed Chrome extension for auto-replies (–34% response time).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Design SPOT -->
+      <div class="timeline-item left">
+        <div class="timeline-icon">
+          <img src="static/images/Design SPOT_Logo.png" alt="Design SPOT Logo" />
+        </div>
+        <div class="timeline-content">
+          <h3>Design SPOT Co., Ltd.</h3>
+          <span class="timeline-duration">Mar 2023 – Oct 2024</span>
+          <p class="position-professional">Interpretation & Translation Intern</p>
+          <ul>
+            <li>Led bilingual meetings, facilitating cross-border deals.</li>
+            <li>Negotiated MOUs and secured exclusive licenses.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EISHIN -->
+      <div class="timeline-item right">
+        <div class="timeline-icon">
+          <img src="static/images/EISHIN_Logo.png" alt="EISHIN Logo" />
+        </div>
+        <div class="timeline-content">
+          <h3>EISHIN Co., Ltd.</h3>
+          <span class="timeline-duration">May 2024 – Jul 2024</span>
+          <p class="position-professional">Inside Sales Intern</p>
+          <ul>
+            <li>Promoted Hiring CX Cloud, exceeded KPIs.</li>
+            <li>Ranked 3rd in new client acquisition.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- JPBIO -->
+      <div class="timeline-item left">
+        <div class="timeline-icon">
+          <img src="static/images/JP BIO_Logo.png" alt="JPBIO Logo" />
+        </div>
+        <div class="timeline-content">
+          <h3>JPBIO Co., Ltd.</h3>
+          <span class="timeline-duration">Mar 2022 – Jun 2022</span>
+          <p class="position-professional">Business Planning Intern</p>
+          <ul>
+            <li>Researched digital therapeutics and proposed products.</li>
+            <li>Collaborated on prototypes, assessed feasibility.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" class="section fade-in">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <h3 class="project-title">💬 Chrome CS Macro Extension</h3>
+        <span class="project-date">Oct 2024 – Dec 2024</span>
+        <p class="project-role">Product Planner & UX Researcher</p>
+        <p class="project-desc">
+          Proposed and implemented a Chrome extension to streamline customer support macros, based on UX research and benchmark analysis.
+        </p>
+        <ul class="project-impact">
+          <li>Successfully launched and adopted by CS teams</li>
+          <li>Reduced average response time by 34%</li>
         </ul>
+        <div class="project-tags">
+          <span class="badge">Chrome Extension</span>
+          <span class="badge">UX Research</span>
+          <span class="badge">Figma</span>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <h3 class="project-title">🧠 AI Keyword Extraction Tool</h3>
+        <span class="project-date">Nov 2024 – Jan 2025</span>
+        <p class="project-role">AI Planner & Data Analyst</p>
+        <p class="project-desc">
+          Built a Python-based tool to automatically extract keywords from CS logs, streamlining manual analysis for faster decision-making.
+        </p>
+        <ul class="project-impact">
+          <li>Improved processing speed by 30% for customer support data review</li>
+          <li>Contributed to internal knowledge base expansion and workflow automation</li>
+        </ul>
+        <div class="project-tags">
+          <span class="badge">Python</span>
+          <span class="badge">OpenAI API</span>
+          <span class="badge">Pandas</span>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card">
+        <h3 class="project-title">🎮 2018 KWC – Game Division Grand Prize</h3>
+        <span class="project-date">Apr 2018 – Feb 2019</span>
+        <p class="project-role">Project Manager & 3D Graphics Designer</p>
+        <p class="project-desc">
+          Led a 6-member team to develop a 3D game, winning the grand prize among 3,000 national teams in a Korean content competition.
+        </p>
+        <ul class="project-impact">
+          <li>Managed development schedule, planning, and team coordination</li>
+          <li>Received $2,000 USD in prize money</li>
+        </ul>
+        <div class="project-tags">
+          <span class="badge">Unity</span>
+          <span class="badge">Photoshop</span>
+          <span class="badge">Microsoft Office</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="toolbox" class="section fade-in">
+    <h2>My Toolbox</h2>
+    <div class="toolbox-category">
+      <h3>💻 Productivity</h3>
+      <div class="toolbox-list">
+        <span class="tool-badge badge-blue">Excel</span>
+        <span class="tool-badge badge-blue">Word</span>
+        <span class="tool-badge badge-blue">PowerPoint</span>
+        <span class="tool-badge badge-blue">Notion</span>
+        <span class="tool-badge badge-blue">Slack</span>
       </div>
     </div>
-    
-    
 
-    <!-- BEENOS -->
-    <div class="timeline-item right">
-      <div class="timeline-icon">
-        <img src="static/images/Beenos_logo.png" alt="Beenos_Logo">
-      </div>
-      <div class="timeline-content">
-        <h3>BEENOS Inc.</h3>
-        <span class="timeline-duration">Oct 2024 – Mar 2025</span>
-        <p class="position-professional">Business Development Intern</p>
-        <ul>
-          <li>Enhanced requirement docs, improving metadata workflows.</li>
-          <li>Built AI tool for keyword extraction (↑30% speed).</li>
-          <li>Proposed Chrome extension for auto-replies (–34% response time).</li>
-        </ul>
+    <div class="toolbox-category">
+      <h3>🎨 Creative & Design</h3>
+      <div class="toolbox-list">
+        <span class="tool-badge badge-pink">Figma</span>
+        <span class="tool-badge badge-pink">Photoshop</span>
+        <span class="tool-badge badge-pink">Illustrator</span>
       </div>
     </div>
 
-    <!-- Design SPOT -->
-    <div class="timeline-item left">
-      <div class="timeline-icon">
-        <img src="static/images/Design SPOT_Logo.png" alt="Design SPOT_Logo">
-      </div>      
-      <div class="timeline-content">
-        <h3>Design SPOT Co., Ltd.</h3>
-        <span class="timeline-duration">Mar 2023 – Oct 2024</span>
-        <p class="position-professional">Interpretation & Translation Intern</p>
-        <ul>
-          <li>Led bilingual meetings, facilitating cross-border deals.</li>
-          <li>Negotiated MOUs and secured exclusive licenses.</li>
-        </ul>
+    <div class="toolbox-category">
+      <h3>🤖 Tech & AI</h3>
+      <div class="toolbox-list">
+        <span class="tool-badge badge-purple">Python</span>
+        <span class="tool-badge badge-purple">SQL</span>
+        <span class="tool-badge badge-purple">ChatGPT</span>
+        <span class="tool-badge badge-purple">Dify AI</span>
+        <span class="tool-badge badge-purple">Unity</span>
       </div>
-    </div>
+    </section>
 
-    <!-- EISHIN -->
-    <div class="timeline-item right">
-      <div class="timeline-icon">
-        <img src="static/images/EISHIN_Logo.png" alt="EISHIN Logo">
-      </div>      
-      <div class="timeline-content">
-        <h3>EISHIN Co., Ltd.</h3>
-        <span class="timeline-duration">May 2024 – Jul 2024</span>
-        <p class="position-professional">Inside Sales Intern</p>
-        <ul>
-          <li>Promoted Hiring CX Cloud, exceeded KPIs.</li>
-          <li>Ranked 3rd in new client acquisition.</li>
-        </ul>
-      </div>
-    </div>
-
-<!-- JPBIO -->
-<div class="timeline-item left">
-  <div class="timeline-icon">
-    <img src="static/images/JP BIO_Logo.png" alt="JPBIO Logo">
-  </div>
-  <div class="timeline-content">
-    <h3>JPBIO Co., Ltd.</h3>
-    <span class="timeline-duration">Mar 2022 – Jun 2022</span>
-    <p class="position-professional">Business Planning Intern</p>
-    <ul>
-      <li>Researched digital therapeutics and proposed products.</li>
-      <li>Collaborated on prototypes, assessed feasibility.</li>
-    </ul>
-  </div>
-</div>
-
-</section>
-
-<section id="projects" class="section fade-in">
-  <h2 class="section-title">Projects</h2>
-  <div class="project-grid">
-
-    <!-- Project Card 1 -->
-    <div class="project-card">
-      <h3 class="project-title">💬 Chrome CS Macro Extension</h3>
-      <span class="project-date">Oct 2024 – Dec 2024</span>
-      <p class="project-role">Product Planner & UX Researcher</p>
-      <p class="project-desc">
-        Proposed and implemented a Chrome extension to streamline customer support macros, based on UX research and benchmark analysis.
+    <section id="contact" class="section fade-in">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-text">
+        Let's connect — I'm always open to new opportunities, collaborations, or just a good conversation.
       </p>
-      <ul class="project-impact">
-        <li>Successfully launched and adopted by CS teams</li>
-        <li>Reduced average response time by 34%</li>
-      </ul>
-      <div class="project-tags">
-        <span class="badge">Chrome Extension</span>
-        <span class="badge">UX Research</span>
-        <span class="badge">Figma</span>
+      <div class="contact-buttons">
+        <a href="https://mail.google.com/mail/?view=cm&amp;to=eunhaeng.lee.work@gmail.com"
+           target="_blank"
+           class="contact-btn">
+          📧 Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/eunhaeng-lee-amazon/" target="_blank"
+           class="contact-btn">
+          🔗 LinkedIn
+        </a>
+        <a href="https://github.com/eunhaenglee" target="_blank" class="contact-btn">
+          💻 GitHub
+        </a>
       </div>
-    </div>
-    
-    
-
-    <!-- Project Card 2 -->
-<div class="project-card">
-  <h3 class="project-title">🧠 AI Keyword Extraction Tool</h3>
-  <span class="project-date">Nov 2024 – Jan 2025</span>
-  <p class="project-role">AI Planner & Data Analyst</p>
-  <p class="project-desc">
-    Built a Python-based tool to automatically extract keywords from CS logs, streamlining manual analysis for faster decision-making.
-  </p>
-  <ul class="project-impact">
-    <li>Improved processing speed by 30% for customer support data review</li>
-    <li>Contributed to internal knowledge base expansion and workflow automation</li>
-  </ul>
-  <div class="project-tags">
-    <span class="badge">Python</span>
-    <span class="badge">OpenAI API</span>
-    <span class="badge">Pandas</span>
-  </div>
-</div>
-
-
-    <!-- Project Card 3 -->
-    <div class="project-card">
-      <h3 class="project-title">🎮 2018 KWC (Korea Wi.content Contest) – Game Division Grand Prize</h3>
-      <span class="project-date">Apr 2018 – Feb 2019</span>
-      <p class="project-role">Project Manager & 3D Graphics Designer</p>
-      <p class="project-desc">
-        Led a 6-member team to develop a 3D game, winning the grand prize among 3,000 national teams in a Korean content competition.
+      <p class="closing-message">
+        Thanks for stopping by. Wishing you a meaningful and creative journey ahead!
       </p>
-      <ul class="project-impact">
-        <li>Managed development schedule, planning, and team coordination</li>
-        <li>Received $2,000 USD in prize money</li>
-      </ul>
-      <div class="project-tags">
-        <span class="badge">Unity</span>
-        <span class="badge">Photoshop</span>
-        <span class="badge">Microsoft Office</span>
-      </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+  <footer>
+    <p style="text-align: center;">&copy; 2025 Eunhaeng. All rights reserved.</p>
+  </footer>
 
-<section id="toolbox" class="section fade-in">
-  <h2>My Toolbox</h2>
-  <div class="toolbox-category">
-    <h3>💻 Productivity</h3>
-    <div class="toolbox-list">
-      <span class="tool-badge badge-blue">Excel</span>
-      <span class="tool-badge badge-blue">Word</span>
-      <span class="tool-badge badge-blue">PowerPoint</span>
-      <span class="tool-badge badge-blue">Notion</span>
-      <span class="tool-badge badge-blue">Slack</span>
-    </div>
-  </div>
+  <!-- Back to Top 버튼 -->
+  <a href="#home" id="backToTop" class="contact-btn">↑</a>
 
-  <div class="toolbox-category">
-    <h3>🎨 Creative & Design</h3>
-    <div class="toolbox-list">
-      <span class="tool-badge badge-pink">Figma</span>
-      <span class="tool-badge badge-pink">Photoshop</span>
-      <span class="tool-badge badge-pink">Illustrator</span>
-    </div>
-  </div>
+  <!-- 스크롤 시 nav 배경 토글 -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 10) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    });
+  </script>
 
-  <div class="toolbox-category">
-    <h3>🤖 Tech & AI</h3>
-    <div class="toolbox-list">
-      <span class="tool-badge badge-purple">Python</span>
-      <span class="tool-badge badge-purple">SQL</span>
-      <span class="tool-badge badge-purple">ChatGPT</span>
-      <span class="tool-badge badge-purple">Dify AI</span>
-      <span class="tool-badge badge-purple">Unity</span>
-    </div>
-  </div>
-</section>
+  <!-- Back to Top 스크립트 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const backBtn = document.getElementById('backToTop');
+      backBtn.style.display = 'none';
 
+      window.addEventListener('scroll', () => {
+        backBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+      });
 
-<section id="contact" class="section fade-in">
-  <h2 class="section-title">Contact</h2>
-
-  <p class="contact-text">
-    Let's connect — I'm always open to new opportunities, collaborations, or just a good conversation.
-  </p>
-
-  <div class="contact-buttons">
-    <a href="https://mail.google.com/mail/?view=cm&to=eunhaeng.lee.work@gmail.com" target="_blank" class="contact-btn">📧 Email Me</a>
-    <a href="https://www.linkedin.com/in/eunhaeng-lee-amazon/" target="_blank" class="contact-btn">🔗 LinkedIn</a>
-    <a href="https://github.com/eunhaenglee" target="_blank" class="contact-btn">💻 GitHub</a> 
-  </div>
-
-  <p class="closing-message">
-    Thanks for stopping by. Wishing you a meaningful and creative journey ahead!
-  </p>
-</section>
-
-
-
-
-<footer>
-  <p style="text-align: center;">&copy; 2025 Eunhaeng. All rights reserved.</p>
-</footer>
-
-
-<script>
-  window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 10) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-</script>
-
-// 아래 스크립트는 </body> 직전에 추가하세요.
-<script>
-  const backBtn = document.getElementById('backToTop');
-  backBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // 스크롤 내리면 버튼 보이기/숨기기
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) backBtn.style.display = 'block';
-    else backBtn.style.display = 'none';
-  });
-  // 초기 숨김
-  backBtn.style.display = 'none';
-</script>
-
-
-<!-- 기존 button 대신 이 코드로 교체 -->
-<a href="#home" id="backToTop" class="contact-btn">↑</a>
-
-
+      backBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
