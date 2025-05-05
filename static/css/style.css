@@ -1,3 +1,26 @@
+/* 1) 모든 요소에 box-sizing 적용 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2) 가로 스크롤 안 나오게 */
+html, body {
+  overflow-x: hidden;
+}
+
+/* 3) 컨테이너 기본 여백 */
+.container {
+  width: 100%;
+  max-width: 1200px;   /* 필요에 따라 조정 */
+  margin: 0 auto;
+  padding: 0 1rem;     /* 좌우 16px 여백 */
+}
+
+@media screen and (max-width: 480px) {
+  .home-content h1 { font-size: 2rem; }
+  .subtitle      { font-size: 1rem; }
+  .intro         { font-size: 0.9rem; }
+}
 
 /* ─────────────────────────────────────────────
    글로벌 박스 사이징 & 수평 오버플로우 방지
