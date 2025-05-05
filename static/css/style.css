@@ -162,19 +162,54 @@ nav#navbar a:hover {
   z-index: 1;
 }
 
+/* -----------------------------------
+   PC: 기존 SVG path d 속성 애니메이션 유지
+   ----------------------------------- */
 .wave-path {
-  fill: #b8d6f0;
-  animation: waveMove 4s ease-in-out infinite;
+  animation: waveMove 2.5s ease-in-out infinite;
+  /* webkit 접두사 추가 */
+  -webkit-animation: waveMove 2.5s ease-in-out infinite;
 }
 
-@keyframes waveMove {
-  0%,100% {
+@-webkit-keyframes waveMove {
+  0%, 100% {
     d: path("M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z");
   }
   50% {
     d: path("M0,50 C300,20 900,60 1200,50 L1200,100 L0,100 Z");
   }
 }
+@keyframes waveMove {
+  0%, 100% {
+    d: path("M0,30 C300,80 900,-20 1200,30 L1200,100 L0,100 Z");
+  }
+  50% {
+    d: path("M0,50 C300,20 900,60 1200,50 L1200,100 L0,100 Z");
+  }
+}
+
+/* -----------------------------------
+   Mobile fallback: transform 으로 좌우 흔들기 
+   ----------------------------------- */
+@media screen and (max-width: 768px) {
+  .wave-animation {
+    /* 애니메이션 속도를 조금 느리게 */
+    animation: waveShift 4s linear infinite;
+    -webkit-animation: waveShift 4s linear infinite;
+  }
+
+  @-webkit-keyframes waveShift {
+    0%   { transform: translateX(0)      translateY(0)   scaleX(1.0); }
+    50%  { transform: translateX(-10px)  translateY(2px) scaleX(1.02); }
+    100% { transform: translateX(0)      translateY(0)   scaleX(1.0); }
+  }
+  @keyframes waveShift {
+    0%   { transform: translateX(0)      translateY(0)   scaleX(1.0); }
+    50%  { transform: translateX(-10px)  translateY(2px) scaleX(1.02); }
+    100% { transform: translateX(0)      translateY(0)   scaleX(1.0); }
+  }
+}
+
 
 /* bounce 애니메이션 */
 @keyframes bounce {
